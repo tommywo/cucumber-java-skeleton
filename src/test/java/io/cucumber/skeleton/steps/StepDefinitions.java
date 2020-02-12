@@ -1,6 +1,7 @@
-package io.cucumber.skeleton;
+package io.cucumber.skeleton.steps;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.skeleton.Belly;
 
 import org.junit.Assert;
 

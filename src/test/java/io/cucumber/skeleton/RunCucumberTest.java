@@ -1,10 +1,17 @@
 package io.cucumber.skeleton;
 
-import io.cucumber.junit.CucumberOptions;
-import io.cucumber.junit.Cucumber;
-import org.junit.runner.RunWith;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"pretty"})
-public class RunCucumberTest {
+
+
+@CucumberOptions(
+    tags = "@bar",
+    glue = {"io.cucumber.skeleton.steps"},
+    plugin = {
+        "rerun:target/cucumber-report/rerun.txt",
+            "json:target/cucumber-report/cucumber.json",
+              "junit:target/cucumber-report/cucumber.xml"})
+public class RunCucumberTest extends AbstractTestNGCucumberTests {
 }
+//
